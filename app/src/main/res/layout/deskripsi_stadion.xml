@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_margin="@dimen/tiny_margin"
+            android:paddingTop="@dimen/tiny_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_kotak"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/nama_stadion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/tiny_margin"
+                android:text="@string/stadion"
+                android:textColor="@color/colorPutih"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/tiny_margin"
+                android:layout_marginRight="@dimen/tiny_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:id="@+id/gambar_stadion"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/colorPrimary" />
+            <TextView
+                android:id="@+id/lokasi_stadion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tiny_margin"
+                android:layout_marginLeft="@dimen/tiny_margin"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="3dp"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/kapasitas_stadion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tiny_margin"
+                android:layout_marginLeft="@dimen/tiny_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/kapasitas"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

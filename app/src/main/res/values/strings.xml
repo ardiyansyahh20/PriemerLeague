@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Priemer League</string>
+    <string name="gambar_club" />
+    <string name="nama_club">Club Name</string>
+    <string name="liga_club">Club of League</string>
+    <string name="manager">manager : %s</string>
+    <string name="tahun_club">was founded in : %s</string>
+    <string name="detail">detail</string>
+    <string name="share">share</string>
+    <string name="website">website : %s</string>
+    <string name="Deskripsi">Description</string>
+    <string name="stadion">Stadium : %s</string>
+    <string name="negara">Country : %s</string>
+    <string name="jersey">Jersey Club</string>
+    <string name="kapasitas">Capacity of : %s spectators</string>
+    <string name="lokasi">Location : %s</string>
+    <string name="language">Change Language</string>
+
+
+</resources>

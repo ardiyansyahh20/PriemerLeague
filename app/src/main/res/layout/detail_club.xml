@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
+    android:padding="@dimen/tiny_margin"
+    android:layout_marginTop="@dimen/tiny_margin">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gambar_club"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@color/colorAccent"/>
+
+    <LinearLayout
+        android:background="@drawable/layout_kotak"
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gambar_club"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/detail_nama_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textColor="@color/colorPutih"
+            tools:text="Man UTD"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/detail_liga_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"
+            tools:text="priemer league"/>
+
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:id="@+id/detail_website_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textColor="@color/colorYellow"
+            tools:text="www.mu.com"/>
+
+        <TextView
+            android:drawableStart="@drawable/ic_public"
+            android:drawableLeft="@drawable/ic_public"
+            android:drawablePadding="3dp"
+            android:id="@+id/detail_negara_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/colorPutih"
+            tools:text="england"/>
+
+        <TextView
+            android:drawableStart="@drawable/ic_date_range"
+            android:drawableLeft="@drawable/ic_date_range"
+            android:drawablePadding="3dp"
+            android:id="@+id/detail_tahun_club"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/colorPutih"
+            tools:text="1989"/>
+
+        <TextView
+            android:drawableStart="@drawable/ic_account_circle"
+            android:drawableLeft="@drawable/ic_account_circle"
+            android:drawablePadding="3dp"
+            android:id="@+id/detail_manajer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/tiny_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/colorPutih"
+            tools:text="Mourinho"/>
+        <!--<TextView-->
+            <!--android:id="@+id/detail_stadion"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/activity_vertical_margin"-->
+            <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+            <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+            <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+            <!--android:textColor="@color/colorPutih"-->
+            <!--tools:text="old traford"/>-->
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
