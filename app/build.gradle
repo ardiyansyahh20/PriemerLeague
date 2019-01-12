@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField("String","SPORT_URL","\"https://www.thesportsdb.com/api/v1/json/1/\"")
     }
     buildTypes {
         release {
@@ -40,4 +41,5 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     implementation 'com.codesgood:justifiedtextview:1.0.2'
+    implementation 'com.android.volley:volley:1.1.1'
 }

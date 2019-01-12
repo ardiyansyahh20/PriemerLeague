@@ -225,6 +225,10 @@ public class Club implements Parcelable {
         this.kapasitas = in.readString();
     }
 
+    public Club(){
+
+    }
+
     public static final Creator<Club> CREATOR = new Creator<Club>() {
         @Override
         public Club createFromParcel(Parcel source) {
