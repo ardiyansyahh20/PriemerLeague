@@ -9,4 +9,8 @@ public class ApiRepository {
         String url = BuildConfig.SPORT_URL+ligaUrl+liga;
         return url;
     }
+    public String getLigaId(){
+        String url = BuildConfig.SPORT_URL+"all_leagues.php";
+        return  url;
+    }
 }
