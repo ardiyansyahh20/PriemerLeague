@@ -11,6 +11,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ardi.priemerleague.Api.ApiRepository;
 import com.ardi.priemerleague.entity.Club;
+import com.ardi.priemerleague.entity.Liga;
 import com.ardi.priemerleague.view.MainView;
 
 import org.json.JSONArray;
@@ -75,23 +76,38 @@ public class Presenter {
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject object = array.getJSONObject(i);
                         Club club = new Club(object);
-//                        club.setNamaTeam(object.getString("strTeam"));
-//                        club.setTahunTeam(object.getString("intFormedYear"));
-//                        club.setManagerTeam(object.getString("strManager"));
-//                        club.setStadionTeam(object.getString("strStadium"));
-//                        club.setLogoTeam(object.getString("strTeamBadge"));
-//                        club.setDeskripsiTeam(object.getString("strDescriptionEN"));
-//                        club.setNegaraTeam(object.getString("strCountry"));
-//                        club.setBannerTeam(object.getString("strTeamFanart1"));
-//                        club.setLigaTeam(object.getString("strLeague"));
-//                        club.setWebsiteTeam(object.getString("strWebsite"));
-//                        club.setGambarStadion(object.getString("strStadiumThumb"));
-//                        club.setLokasiStadion(object.getString("strStadiumLocation"));
-//                        club.setJerseyClub(object.getString("strTeamJersey"));
-//                        club.setKapasitas(object.getString("intStadiumCapacity"));
                         listClub.add(club);
                     }
                     view.showData(listClub);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
+    }
+    public void LoadIdLiga() {
+        String url = apiRepository.getLigaId();
+        final ArrayList<Liga> listLiga = new ArrayList<>();
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray array = jsonObject.getJSONArray("leagues");
+                    for (int i = 0; i < array.length(); i++) {
+                        JSONObject object = array.getJSONObject(i);
+                        Liga liga = new Liga(object);
+                        listLiga.add(liga);
+                    }
+                    view.showLiga(listLiga);
 
                 } catch (Exception e) {
                     e.printStackTrace();
